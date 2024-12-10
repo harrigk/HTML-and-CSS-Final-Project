@@ -1,0 +1,63 @@
+/* Apply styles for printing */
+@media print {
+    /* Hide all images */
+    img {
+        display: none !important;
+    }
+
+    /* Set all text to black and 12pt */
+    * {
+        color: black !important;
+        font-size: 12pt !important;
+        text-shadow: none !important;
+        box-shadow: none !important;
+        border: none !important;
+    }
+
+    /* Set background color to white */
+    body, .grid-container, .grid-header, .grid-left, .grid-right, .grid-footer, .grid-main {
+        background-color: white !important;
+    }
+
+    /* Set margins and padding to 0 */
+    * {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* Ensure all content is displayed as block */
+    * {
+        display: block !important;
+    }
+
+    /* Ensure grid layout is 100% width */
+    .grid-container {
+        display: block !important;
+        width: 100% !important;
+    }
+
+    /* Links should be underlined and have no colors */
+    a {
+        text-decoration: underline !important;
+        color: inherit !important;
+    }
+
+    /* Ensure all sections and content are visible on print */
+    .grid-header, .grid-left, .grid-right, .grid-main, .grid-footer {
+        display: block !important;
+    }
+
+    /* Hide images in all sections */
+    .grid-header img,
+    .grid-left img,
+    .grid-right img,
+    .grid-main img,
+    .grid-footer img {
+        display: none !important;
+    }
+
+    /* Avoid JavaScript from printing */
+    script {
+        display: none !important;
+    }
+}
